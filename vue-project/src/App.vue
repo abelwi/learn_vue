@@ -2,7 +2,7 @@
 console.log('Hello world')
 
 import { ref, reactive } from 'vue'
-const message = ref('Hello world')
+const titleClass = ref('title')
 
 const counter = reactive({
   count: 0
@@ -13,10 +13,16 @@ counter.count++
 
 <template>
   <button>Click me</button>
-  <h1>{{ message }}</h1>
+  <h1 v-bind:class="titleClass">Hello world</h1>
   <p>Count is: {{ counter.count }}</p>
 
 </template>
+
+<style>
+  .title {
+    color: green;
+  }
+</style>
 
 
 
