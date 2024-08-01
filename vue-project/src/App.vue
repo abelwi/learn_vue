@@ -1,28 +1,45 @@
 <script setup>
 console.log('Hello world')
 
-import { ref, reactive } from 'vue'
-const titleClass = ref('title')
+import { ref } from 'vue'
+ let id = 0
 
-const counter = reactive({
-  count: 0
-})
-counter.count++
+ const newTodo = ref('')
+ const todos = ref([
+  { id: id++, text: 'Learn HTML'},
+  { id: id++, text: 'Learn CSS'},
+  { id: id++, text: 'Learn Javacript'}
+ ])
 
+ function addTodo() {
+  if(newTodo.value.trim()) {
+    todos.value.push({ id: id++, text: newTodo.value.trim() });
+    newTodo.value = '';
+  }
+ }
+
+ function removeTodo(todo) {
+  todos.value = todos.value.filter(t => t.id !== todo.id);
+ }
 </script>
 
 <template>
-  <button>Click me</button>
-  <h1 v-bind:class="titleClass">Hello world</h1>
-  <p>Count is: {{ counter.count }}</p>
+  
+  <form @submit.prevent="addTodo">
+    <input v-model="newTodo" required placeholder="new todo">
+    <button>Add todo</button>
+  </form>
 
+  <ul>
+    <li v-for="todo in todos" :key="todo.id">
+      {{ todo.text }}
+      <button @click="removeTodo(todo)">x</button>
+
+    </li>
+  </ul>
 </template>
 
-<style>
-  .title {
-    color: green;
-  }
-</style>
+
 
 
 
