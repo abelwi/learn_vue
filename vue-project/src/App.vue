@@ -12,14 +12,12 @@ import { ref } from 'vue'
  ])
 
  function addTodo() {
-  if(newTodo.value.trim()) {
-    todos.value.push({ id: id++, text: newTodo.value.trim() });
-    newTodo.value = '';
-  }
+  todos.value.push({ id: id++, text: newTodo.value })
+  newTodo.value = ''
  }
 
  function removeTodo(todo) {
-  todos.value = todos.value.filter(t => t.id !== todo.id);
+  todos.value = todos.value.filter(t => t !== todo );
  }
 </script>
 
