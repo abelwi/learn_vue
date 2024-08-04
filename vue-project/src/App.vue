@@ -15,9 +15,9 @@
     background-color: lightgreen;
   }
 
-  #app > div:hover {
+  /* #app > div:hover {
     cursor: pointer;
-  }
+  } */
 </style>
 
 

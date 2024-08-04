@@ -29,4 +29,8 @@
         font-weight: bold;
         color: rgb(122, 12, 12);
     }
+
+    button:hover {
+        cursor: pointer;
+    }
 </style>
