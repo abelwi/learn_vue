@@ -1,7 +1,9 @@
 <template>
+    <h1>Nhập câu hỏi task 2!</h1>
     <div id="box">
         <div id="type_text">
         <textarea v-model="text" @input="adjustHeight" required placeholder="Type here"></textarea>
+        <button id="clear_button">x</button>
         </div>
         <button id="test">Click me</button>
     </div>
@@ -26,6 +28,10 @@
   </script>
   
   <style>
+    h1 {
+      text-align: center;
+      margin-top: 3%;
+    }
     #box {
         margin-top: 5%;
         text-align: center;
@@ -38,13 +44,21 @@
     }
 
     #type_text {
-      margin-bottom: 12px;
+      margin-top: 1%;
+      margin-bottom: 3%;
+      
+    }
+
+    #clear_button {
+      margin-left: 2%;
+      
     }
     textarea {
+      font-size: large;
       margin-top: 5%;
       width: 80%;
       border: none;
-      border-bottom: solid gray 2px;
+      border-bottom: solid rgb(159, 157, 157) 2px;
       outline: none;
       resize: none; /* Disable manual resizing */
       overflow: hidden; /* Hide scroll bar */
@@ -53,9 +67,9 @@
       border-bottom: solid black 2px;
     }
     #test {
+      font-size: large;
       margin-top: 5%;
-      font-weight: bold;
-      background-color: aquamarine;
+      background-color: rgb(140, 211, 187);
       padding: 10px 20px;
       border-radius: 8px;
       border: solid gray 1px;
@@ -63,7 +77,7 @@
     }
     button:hover {
       cursor: pointer;
-      background: aqua;
+      /* background: rgb(30, 163, 163); */
     }
   </style>
   
