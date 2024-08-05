@@ -53,11 +53,13 @@
       border-bottom: solid black 2px;
     }
     #test {
+      margin-top: 5%;
       font-weight: bold;
       background-color: aquamarine;
       padding: 10px 20px;
       border-radius: 8px;
       border: solid gray 1px;
+      width: 40%;
     }
     button:hover {
       cursor: pointer;
