@@ -1,36 +1,32 @@
 <template>
-    <div @:click="countClicks">
-        <h2>{{ name }}</h2>
-        <p>{{ message }}</p>
-        <button id="red">Click me {{ clicks }} times.</button>
+    <div id="type_text">
+        <input type="text" required placeholder="type here">
     </div>
+    <button id="test">Click me</button>
     
 </template>
 
-<script>
-    export default {
-        data() {
-            return {
-                name: 'Chicken',
-                message: 'I love chicken',
-                clicks: 0
-            }
-        },
-        methods: {
-            countClicks() {
-                this.clicks++
-            }
-        }
-    }
-</script>
+<script></script>
 
 <style>
-    #red {
+    #type_text {
+        margin-bottom: 12px;
+    }
+    input {
+        width: 200px;
+        
+    }
+    #test {
         font-weight: bold;
-        color: rgb(122, 12, 12);
+        background-color: aquamarine;
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: black 1px;
+        
     }
 
     button:hover {
         cursor: pointer;
+        background: aqua;
     }
 </style>
