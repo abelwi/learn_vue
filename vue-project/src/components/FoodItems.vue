@@ -1,5 +1,5 @@
-<template>
-    <h1>Nhập câu hỏi task 2!</h1>
+<!-- <template>
+    <h1 class="mt-16 text-2xl font-semibold text-center">Luyện tập writing task 2!</h1>
     <div id="box">
         <div id="type_text">
         <textarea v-model="text" @input="adjustHeight" required placeholder="Type here"></textarea>
@@ -25,9 +25,9 @@
       }
     }
   };
-  </script>
+  </script> -->
   
-  <style>
+  <!-- <style>
     h1 {
       text-align: center;
       margin-top: 3%;
@@ -79,5 +79,5 @@
       cursor: pointer;
       /* background: rgb(30, 163, 163); */
     }
-  </style>
+  </style> -->
   
